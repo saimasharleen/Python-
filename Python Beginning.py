@@ -314,11 +314,106 @@ else:
     print("Negative Number")
 
 
-# In[ ]:
+# In[2]:
 
 
 # Find the smallest Number out of 3 values
 n1 = 2
 n2 = 60
 n3 = 78
+
+if (n1 <= n2) and (n1 <= n3):
+    smallest = n1
+elif (n2 <= n1) and (n2 <= n3):
+    smallest = n2
+else:
+    smallest = n3
+print ("smallest element among three number is : {}".format(smallest))
+
+
+# In[3]:
+
+
+if None:
+    print ("Is True")
+else:
+    print("Is False")
+
+
+# # For Loop
+
+# In[10]:
+
+
+subjects = ["maths", "science", "hindi", "history"]
+
+
+# In[11]:
+
+
+print(len(subjects[0]))
+print(len(subjects[1]))
+print(len(subjects[2]))
+print(len(subjects[3]))
+
+
+# In[12]:
+
+
+for i in range(4):
+    print(len(subjects[i]))
+
+
+# In[13]:
+
+
+for i in range(1,10,3):
+    print(i)
+
+
+# In[25]:
+
+
+str1=''
+for i in range(0,9):
+    if i<5:
+        str1 += '*'
+        print(str1)
+    elif i>4:
+        str1 = str1[:-2]
+        print(str1) 
+
+
+# In[27]:
+
+
+my_string = "Hello from Bangladesh"
+for n,alphabet in enumerate(my_string):
+    print(alphabet,n)
+
+
+# # While Loop
+
+# In[32]:
+
+
+num = int(input("Enter a number:"))         #convert string to int 
+isDivisible = False;
+i = 2;
+while i < num:
+    if num % 1 == 0:
+        isDivisible = True;
+        print ("{} is divisble by {}".format(num,i))
+        i +=1;
+if isDivisible:
+    print("{} is NOT a Prime number".format(num))
+else:
+    print("{} is a Prime number".format(num))
+        
+
+
+# In[ ]:
+
+
+
 
