@@ -412,8 +412,100 @@ else:
         
 
 
-# In[ ]:
+# # Creating Functions
+
+# In[33]:
 
 
+# Check function-bangladesh doc
 
+
+# In[5]:
+
+
+def hello_world():
+    print('Hello World')
+hello_world()
+
+
+# In[6]:
+
+
+def cube(num):
+    out = num**3
+    return(out)
+
+
+# In[7]:
+
+
+cube1 = cube(3)
+print(cube1)
+
+
+# In[9]:
+
+
+q = cube(4)
+print("Q is " +str(q))
+
+
+# In[10]:
+
+
+# Calculate factorial
+def factorial(n):
+    if n>1:
+        return n*factorial(n-1)
+    else:
+        return n
+fact = factorial(5)
+print(fact)
+
+
+# In[11]:
+
+
+def submition(*args):
+    print(args)
+    return(sum(args))
+
+
+# In[12]:
+
+
+print(submition(1,2,3,4))
+
+
+# In[13]:
+
+
+captain = "Shakib Al Hasan"
+string_to_list = lambda x: x.split()
+print(string_to_list(captain))
+print(type(string_to_list))
+
+
+# In[14]:
+
+
+multiply = lambda x, y : x*y
+print(multiply(4,4))
+
+
+# In[15]:
+
+
+# Documentation
+def triple(num):
+    """
+    function to triple the number
+    """
+    return 3 * num
+
+
+# In[16]:
+
+
+triple(10)
 
