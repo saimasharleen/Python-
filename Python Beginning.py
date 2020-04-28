@@ -504,8 +504,504 @@ def triple(num):
     return 3 * num
 
 
-# In[16]:
+# In[1]:
 
 
 triple(10)
+
+
+# # String Values and Operator
+
+# In[3]:
+
+
+x = 'AIUB'
+y = "Bhallagenabhai"
+x,y
+
+
+# In[4]:
+
+
+len(x), len(y)
+
+
+# In[5]:
+
+
+small = "hello lets convert it to upper"
+print(small.upper())
+
+
+# In[7]:
+
+
+large = "HELLO LETS CONVERT IT TO LOWER"
+print(large.lower())
+
+
+# In[8]:
+
+
+some_sentence = "There is a space at the end     "
+print(len(some_sentence))
+
+
+# In[9]:
+
+
+print(len(some_sentence.rstrip()))
+
+
+# In[10]:
+
+
+print(some_sentence.rstrip())
+
+
+# In[14]:
+
+
+increment = '4%'
+print(increment.rstrip('%'))
+
+
+# In[15]:
+
+
+start = " There is a space at the start"
+print(start)
+
+
+# In[16]:
+
+
+start = "  There is a space at the start"
+print(start)
+print(start.lstrip())
+
+
+# In[17]:
+
+
+num_with_chars = '*444#'
+print(num_with_chars.rstrip('#'))
+print(num_with_chars.lstrip('*'))
+print(num_with_chars.rstrip('#').lstrip('*'))
+
+
+# In[22]:
+
+
+val = '4 apples'
+no_of_apples = val[0]
+print(no_of_apples)
+print('number of apples is', no_of_apples)
+
+
+# In[23]:
+
+
+what = val [2]
+print(what)
+
+
+# In[24]:
+
+
+what = val [2:]
+print(what)
+
+
+# In[25]:
+
+
+what.replace('a','*%')
+
+
+# In[27]:
+
+
+print(val[2:5])
+
+
+# In[32]:
+
+
+batch = '5 oranges 3 monkeys and'
+fruits = batch [ :9]
+print(fruits)
+
+
+# In[33]:
+
+
+print(batch[ :-2])
+
+
+# In[34]:
+
+
+animals = batch[10:-2]
+print(animals)
+
+
+# In[35]:
+
+
+nums = '123456789'
+even_nums = nums[1::2]
+print(even_nums)
+
+
+# In[36]:
+
+
+odd_nums = nums[0::2]
+print(odd_nums)
+
+
+# In[38]:
+
+
+odd_nums_again = nums[ ::2]
+print(odd_nums_again)
+
+
+# In[40]:
+
+
+first_name = 'pissed'
+last_name = 'off'
+name = first_name+""+last_name
+print(name)
+
+
+# In[41]:
+
+
+name = first_name + " " + last_name
+print(name)
+
+
+# In[43]:
+
+
+name = first_name + " " + last_name + " huru "
+print(name)
+
+
+# In[45]:
+
+
+"""Let's also understand
+examples of 
+multiline comments"""
+first_name.capitalize()
+
+
+# In[46]:
+
+
+age = 20
+my_age = ("I am "+ str(age) + " years old")
+print(my_age)
+
+
+# In[49]:
+
+
+My_age = "I am {0} years old".format(age)
+My_age
+
+
+# In[50]:
+
+
+A = "Data"
+B = "Analysis"
+C = "Numpy"
+
+print("{0} {1} using {2}".format(A,B,C))
+
+
+# In[51]:
+
+
+#concat and update
+name += ' ' + my_age
+print(name)
+
+
+# In[52]:
+
+
+x="as"
+y="assignment"
+
+x in y
+
+
+# # Lists
+
+# In[53]:
+
+
+a = []
+print(a)
+
+
+# In[54]:
+
+
+type(a)
+
+
+# In[55]:
+
+
+languages = ['R','Python', 'SAS', 'Scala', 42]
+print(languages)
+
+
+# In[56]:
+
+
+type(languages)
+
+
+# In[57]:
+
+
+print(languages[0])
+
+
+# In[58]:
+
+
+print(languages[2])
+
+
+# In[59]:
+
+
+print(languages[1:4])
+
+
+# In[60]:
+
+
+print(languages[-2])
+
+
+# In[61]:
+
+
+print(languages[1:])
+
+
+# In[66]:
+
+
+print(languages[:-2])
+
+
+# In[67]:
+
+
+languages = ['R','Python', 'SAS', 'Scala', 42]
+languages.append('ML')
+print(languages)
+
+
+# In[68]:
+
+
+languages.pop()
+
+
+# In[69]:
+
+
+print(languages)
+
+
+# In[71]:
+
+
+languages.pop(0)
+print(languages)
+
+
+# In[72]:
+
+
+languages.pop(1)
+print(languages)
+
+
+# In[73]:
+
+
+languages.append('Deep Learning')
+#languages.remove('Deep Learning')
+print(languages)
+
+
+# In[74]:
+
+
+languages.remove('Deep Learning')
+
+
+# In[75]:
+
+
+languages
+
+
+# In[76]:
+
+
+new_list = languages
+languages.append('Java')
+print(new_list)
+
+
+# In[77]:
+
+
+print(id(languages))
+
+
+# In[78]:
+
+
+print(id(new_list))
+
+
+# In[79]:
+
+
+new_list = languages[:]
+print(id(new_list))
+
+
+# In[80]:
+
+
+#not going to share same memory address
+another_list = languages.copy()
+print(id(another_list))
+
+
+# In[83]:
+
+
+new_list1 = languages.copy()
+languages.append('food')
+print(new_list1)
+
+
+# In[84]:
+
+
+print(id(new_list1))
+
+
+# In[86]:
+
+
+mail = "Amuu jamuu khamuu. okayyyy byee byee."
+words = mail.split() 
+print(words)
+
+
+# In[87]:
+
+
+sentences_in_mail = mail.split('.')
+print(sentences_in_mail)
+
+
+# In[89]:
+
+
+new_mail = " ".join(sentences_in_mail)
+print(new_mail)
+
+
+# In[90]:
+
+
+list1 = ["Lol"]
+print(list1*6)
+
+
+# In[91]:
+
+
+print(list1 + list1)
+
+
+# In[92]:
+
+
+nums = [2,6,9,3,2,10]
+print(len(nums))
+
+
+# In[93]:
+
+
+print(nums[1::2])
+
+
+# In[94]:
+
+
+nums[2]="!!!"
+nums
+
+
+# In[95]:
+
+
+nums = [2,6,9,3,2,10]
+print(sorted(nums))
+
+
+# In[96]:
+
+
+print(max(nums))
+
+
+# In[97]:
+
+
+print(min(nums))
+
+
+# In[98]:
+
+
+#nested list
+n = [[1, 2, 3, 4], [ 5, 6, 7], [8, 9, 10]]
+
+print(n[1])
+
+
+# In[99]:
+
+
+print(n[0][1])
+
+
+# # Tuples
+
+# In[ ]:
+
+
+
 
